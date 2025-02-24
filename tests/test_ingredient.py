@@ -16,7 +16,6 @@ from praktikum.ingredient import Ingredient
 def test_ingredient_creation(ingredient_type, name, price):
     """Проверяет корректное создание объекта Ingredient и его свойств."""
     ingredient = Ingredient(ingredient_type, name, price)
-
     assert ingredient.get_type() == ingredient_type, "Тип ингредиента не совпадает"
     assert ingredient.get_name() == name, "Имя ингредиента не совпадает"
     assert ingredient.get_price() == price, "Цена ингредиента не совпадает"

@@ -39,7 +39,6 @@ def test_move_ingredient():
     ingredient2 = MagicMock(spec=Ingredient)
     burger.add_ingredient(ingredient1)
     burger.add_ingredient(ingredient2)
-
     burger.move_ingredient(1, 0)
     assert burger.ingredients[0] == ingredient2
     assert burger.ingredients[1] == ingredient1
@@ -59,9 +58,7 @@ def test_get_receipt(bun_mock, ingredient_mock):
     burger = Burger()
     burger.set_buns(bun_mock)
     burger.add_ingredient(ingredient_mock)
-
     receipt = burger.get_receipt()
-
     assert "Golden Crispy Bun" in receipt
     assert "Ultra Spicy Ketchup 🔥" in receipt
     assert "legendary sauce" in receipt
